@@ -1,3 +1,9 @@
+n what you needs to be performed on all servers listed in inventory/dev.
+
+In common.yml playbook you will write configuration for repeatable, re-usable, and multi-machine tasks that is common to systems within the infrastructure.
+
+Update your playbooks/common.yml file with following code:
+
 ---
 - name: update web, nfs and db servers
   hosts: webservers, nfs, db
