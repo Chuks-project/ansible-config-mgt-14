@@ -5,7 +5,7 @@
   - always
 
   name: include env-vars file
-  include playook: ../dynamic-assignments/env-vars.yml
+  import playook: ../dynamic-assignments/env-vars.yml
   tags:
   - always
 
