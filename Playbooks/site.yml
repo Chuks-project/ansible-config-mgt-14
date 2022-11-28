@@ -1,6 +1,6 @@
 ---
 - name: import common file
-  import playbook: ../static-assignments/common.yml
+  import_playbook: ../static-assignments/common.yml
   tags:
   - always
 
