@@ -1,20 +1,20 @@
 ---
 - name: import common file
-  import playook: ../static-assignments/common.yml
+  import playbook: ../static-assignments/common.yml
   tags:
   - always
 
 - name: include env-vars file
-  import playook: ../dynamic-assignments/env-vars.yml
+  import playbook: ../dynamic-assignments/env-vars.yml
   tags:
   - always
 
 - name: import database file
-  import playook: ../static-assignment ../static-assignments/db.yml
+  import playbook: ../static-assignment ../static-assignments/db.yml
 
 - name: import webservers file
-  import playook: ../static-assignments/webserver.yml
+  import playbook: ../static-assignments/webserver.yml
 
 - name: import loadbalancers assignment
-  import playook: ../static-assignments/lb.yml
+  import playbook: ../static-assignments/lb.yml
   when: loadbalancer_is_required
