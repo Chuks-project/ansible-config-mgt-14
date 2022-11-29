@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 - name: import common file
   import_playbook: ../static-assignments/common.yml
   tags:
@@ -18,3 +19,20 @@
 - name: import loadbalancers assignment
   import_playbook: ../static-assignments/lb.yml
   when: loadbalancer_is_required
+=======
+# - hosts: nginx
+# - name: install nginx
+#   import_playbook: ../static-assignments/nginx.yml
+
+# - hosts: artifactory
+# - name: install artifactory
+#   import_playbook: ../static-assignments/artifactory.yml
+
+# - hosts: db
+# - name: install mysql
+#   import_playbook: ../static-assignments/db.yml
+
+- hosts: todo
+- name: deployment of todo
+  import_playbook: ../static-assignments/deployment.yml
+>>>>>>> e4f5fdd129b7c1c1673a9472e8fefb2285a94df9
