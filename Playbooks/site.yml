@@ -1,20 +1,16 @@
 ---
-- name: import common file
-  import playbook: ../static-assignments/common.yml
-  tags:
-  - always
+# - hosts: nginx
+# - name: install nginx
+#   import_playbook: ../static-assignments/nginx.yml
 
-- name: include env-vars file
-  import playbook: ../dynamic-assignments/env-vars.yml
-  tags:
-  - always
+# - hosts: artifactory
+# - name: install artifactory
+#   import_playbook: ../static-assignments/artifactory.yml
 
-- name: import database file
-  import playbook: ../static-assignment ../static-assignments/db.yml
+# - hosts: db
+# - name: install mysql
+#   import_playbook: ../static-assignments/db.yml
 
-- name: import webservers file
-  import playbook: ../static-assignments/webserver.yml
-
-- name: import loadbalancers assignment
-  import playbook: ../static-assignments/lb.yml
-  when: loadbalancer_is_required
+- hosts: todo
+- name: deployment of todo
+  import_playbook: ../static-assignments/deployment.yml
