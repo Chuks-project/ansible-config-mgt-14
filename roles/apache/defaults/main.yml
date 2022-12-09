@@ -19,9 +19,9 @@ apache_global_vhost_settings: |
 apache_vhosts:
   # Additional properties:
   # 'serveradmin, serveralias, allow_override, options, extra_parameters'.
-  - servername: "local.dev"
-    documentroot: "/var/www/html"
-    loadbalancer_name: `myapp1`
+  #- servername: "local.dev"
+  # documentroot: "/var/www/html",
+  #  loadbalancer_name: `myapp1`
 
 apache_allow_override: "All"
 apache_options: "-Indexes +FollowSymLinks"
@@ -64,6 +64,8 @@ apache_packages_state: present
 enable_apache_lb: false
 load_balancer_is_required: false
 
-loadbalancer_name: `myapp1`
+loadbalancer_name: "myapp1"
 web1: "172.31.93.167 weight=3"
 web2: "172.31.82.47 weight=3"
+
+
