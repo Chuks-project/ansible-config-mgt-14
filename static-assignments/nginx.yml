@@ -1,4 +1,4 @@
 ---
 - hosts: nginx
   roles:
-    - nginx
+    - { role: geerlingguy.nginx }
