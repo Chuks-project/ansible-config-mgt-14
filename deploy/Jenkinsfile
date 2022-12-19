@@ -33,7 +33,7 @@
 
       stage('Run Ansible playbook') {
         steps {
-           ansiblePlaybook become: true, colorized: true, credentialsId: 'Private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'Inventory/dev', playbook: 'Playbooks/site.yml' 
+           ansiblePlaybook become: true, colorized: true, credentialsId: 'Private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'Inventory/${inventory}', playbook: 'Playbooks/site.yml' 
          }
       }
 
