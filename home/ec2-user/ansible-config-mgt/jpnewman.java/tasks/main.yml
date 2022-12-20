@@ -1,0 +1,26 @@
+---
+
+- name: Ansible lsb
+  debug:
+    msg: "{{ ansible_lsb }}"
+    verbosity: 1
+
+- name: Ansible Distribution
+  debug:
+    msg: "{{ ansible_distribution }}"
+    verbosity: 1
+
+- include: oracle_ppa.yml
+  when: java_installer_type == 'oracle_ppa'
+
+- include: oracle_url.yml
+  when: java_installer_type == 'oracle_url'
+
+- include: oracle_file.yml
+  when: java_installer_type == 'oracle_file'
+
+- include: openjdk.yml
+  when: java_installer_type == 'openjdk'
+
+- include: java_profile.yml
+- include: java_security.yml
