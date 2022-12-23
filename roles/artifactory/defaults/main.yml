@@ -1,6 +1,3 @@
-
-
-
 # defaults file for artifactory
 
 # The version of artifactory to install
@@ -72,6 +69,7 @@ artifactory_binarystore: |-
   <config version="2">
       <chain template="cluster-file-system"/>
   </config>
+
 # Provide systemyaml content below with 2-space indentation
 artifactory_systemyaml: |-
   configVersion: 1
@@ -93,5 +91,6 @@ artifactory_systemyaml: |-
   router:
     entrypoints:
       internalPort: 8046
+
 # Note: artifactory_systemyaml_override is by default false,  if you want to change default artifactory_systemyaml
 artifactory_systemyaml_override: false
