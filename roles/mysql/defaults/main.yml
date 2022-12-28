@@ -131,8 +131,6 @@ mysql_users:
     password: sePret^i
     priv: '*.*:ALL,GRANT
 
-
-
 mysql_disable_log_bin: false
 
 # Replication settings (replication is only enabled if master/user have values).
