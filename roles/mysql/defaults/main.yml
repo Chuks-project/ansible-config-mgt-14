@@ -106,8 +106,8 @@ mysql_config_include_files: []
 #  - { src: path/relative/to/playbook/anotherfile.cnf, force: yes }
 
 # Databases.
-mysql_databases: 
-  - name: Tooling
+mysql_databases:
+  - name: tooling
     collation: utf8_general_ci
     encoding: utf8
     replicate: 1
@@ -119,28 +119,24 @@ mysql_databases:
     replicate: 1
 
 # Users.
-mysql_users: 
+mysql_users:
   - name: webaccess
     host: 0.0.0.0
     password: secret
-    priv:*.*: ALL, GRANT
+    priv: '*.*:ALL,GRANT'
 
 mysql_users:
   - name: homestead
-    host: 172.31.6.120
+    host: 172.31.1.134
     password: sePret^i
-    priv: '*.*:ALL,GRANT
+    priv: '*.*:ALL,GRANT'
 
-# mysql_disable_log_bin: false
-
-# # Replication settings (replication is only enabled if master/user have values).
-# mysql_server_id: "1"
-# mysql_max_binlog_size: "100M"
-# mysql_binlog_format: "ROW"
-# mysql_expire_logs_days: "10"
-# mysql_replication_role: ''
-# mysql_replication_master: ''
-# mysql_replication_master_inventory_host: "{{ mysql_replication_master }}"
-
-# # Same keys as `mysql_users` above.
-# mysql_replication_user: []
+# Replication settings (replication is only enabled if master/user have values).
+mysql_server_id: "1"
+mysql_max_binlog_size: "100M"
+mysql_binlog_format: "ROW"
+mysql_expire_logs_days: "10"
+mysql_replication_role: ''
+mysql_replication_master: ''
+# Same keys as `mysql_users` above.
+mysql_replication_user: []
