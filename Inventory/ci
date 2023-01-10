@@ -1,8 +1,8 @@
 [jenkins]
 172.31.6.120 ansible_ssh_user='ec2-user'
 
-[nginx]
-<Nginx-Private-IP-Address>
+[Sonarqube]
+172.31.1.80 ansible_ssh_user='ubuntu'
 
 [todo]
 172.31.5.123 ansible_ssh_user='ec2-user'
