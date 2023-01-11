@@ -17,4 +17,4 @@
 
 # - hosts: todo
 # - name: Deploy the todo application
-#   ansible.builtin.import_playbook: ../static-assignments/deployment.yml
+#   ansible.builtin.import_pliaybook: ../static-assignments/deployment.yml
