@@ -1,0 +1,17 @@
+---
+- name: Ensure nginx is installed.
+  become: yes
+  package:
+    name: "{{ apache_packages }}"
+    state: "{{ apache_packages_state }}" 
+    enablerepo: "{{ apache_enablerepo | default(omit, true) }}"
+
+
+   # run this command to install posix.boolean
+   # ansible-galaxy collection install ansible.posix
+- name: set http_can_network_connect flag on and keep it persistent across reboots
+  become: yes
+  ansible.posix.seboolean
+  name: httpd_can_network_connect
+  set: yes
+  persistent: yes
