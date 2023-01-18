@@ -1,18 +1,18 @@
 # [jenkins]
-# 172.31.6.120 ansible_ssh_user='ec2-user'
+#172.31.46.235 ansible_ssh_user='ec2-user'
 
-[sonar]
-172.31.1.80 ansible_ssh_user='ubuntu'  
+# [sonar]
+# 172.31.1.80 ansible_ssh_user='ubuntu'  
 
-[sonar:vars] 
-ansible_ssh_private_key_file =/home/ec2-user/ansible-config-mgt/vicky.pem
+# [sonar:vars] 
+# ansible_ssh_private_key_file =/home/ec2-user/ansible-config-mgt/vicky.pem
 
 # [todo]
 # 172.31.5.123 ansible_ssh_user='ec2-user'
 
 
-# [artifactory]
-#  172.31.65.137 ansible_ssh_user='ec2-user'
+[artifactory]
+172.31.42.45 ansible_ssh_user='ec2-user'
 
 
 # [db]
