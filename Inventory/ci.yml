@@ -10,9 +10,8 @@ ansible_ssh_private_key_file =/home/ec2-user/ansible-config-mgt/
 # [todo]
 # 172.31.3.69 ansible_ssh_user='ec2-user'
 
-
-[artifactory]
-172.31.42.45 ansible_ssh_user='ec2-user'
+# [artifactory]
+# 172.31.42.45 ansible_ssh_user='ec2-user'
 
 
 # [db]
