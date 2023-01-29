@@ -17,7 +17,7 @@
 - name: import loadbalancers assignment
   import playbook: ../static-assignments/lb.yml
   when: loadbalancer_is_required
----
+
 # - hosts: db
 # - name: database assignment
 #   ansible.builtin.import_playbook: ../static-assignments/db.yml
