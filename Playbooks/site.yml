@@ -35,5 +35,5 @@
   #   ansible.builtin.import_playbook: ../static-assignments/sonar.yml
 
 - hosts: todo
-- name: Deploy the todo application
+  name: Deploy the todo application
   ansible.builtin.import_pliaybook: ../static-assignments/deployment.yml
